@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="studentsForm">
+      <label for="FullName">Full Name</label>
+      <input type="text" name="fname" placeholder="Hamzeh Dawahreh" required />
+      <label for="birth">Date of birth</label>
+      <input
+        type="date"
+        name="birth"
+        id="birth"
+        value="2005-01-01"
+        max="2017-01-01"
+        min="2005-01-01"
+      />
+      <label for="gender">Gender:</label>
+      <div>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male" required />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female" required />
+      </div>
+      <label for="phone">Phone number</label>
+      <input
+        type="tel"
+        name="phone"
+        id="phone"
+        placeholder="+962 712 345 678"
+        pattern="[0-9]{10}"
+        required
+      />
+      <label for="grade">Grade</label>
+      <input type="number" name="grade" placeholder="84" required />
+
+      <input
+        type="text"
+        value="Images/user.png"
+        alt="image"
+        id="userimage"
+        name="userimage"
+        placeholder="user_image"
+      />
+      <input id="confirm1" type="submit" value="Submit" width="20px" />
+    </form>
+    <script src="app.js"></script>
+  </body>
+</html>
