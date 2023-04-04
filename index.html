@@ -8,44 +8,23 @@
   </head>
   <body>
     <form id="studentsForm">
-      <label for="FullName">Full Name</label>
-      <input type="text" name="fname" placeholder="Hamzeh Dawahreh" required />
-      <label for="birth">Date of birth</label>
-      <input
-        type="date"
-        name="birth"
-        id="birth"
-        value="2005-01-01"
-        max="2017-01-01"
-        min="2005-01-01"
-      />
-      <label for="gender">Gender:</label>
-      <div>
-        <label for="male">Male</label>
-        <input type="radio" name="gender" id="male" value="male" required />
-        <label for="female">Female</label>
-        <input type="radio" name="gender" id="female" value="female" required />
-      </div>
-      <label for="phone">Phone number</label>
+      <label for="Username">Username</label>
+      <input id="username" type="text" name="username" placeholder="Hamzeh" required />
+      <label for="Password">Password</label>
+      <input id="password"  type="password" name="password"  required />
+      
+      <label for="Email">Email</label>
+      <input id="email" type="text" name="email" placeholder="Hmzhdawahreh@gmail.com" required />
       <input
         type="tel"
         name="phone"
         id="phone"
-        placeholder="+962 712 345 678"
-        pattern="[0-9]{10}"
+        placeholder="07 12 345 678"
+        pattern="07\d{8}"
         required
       />
-      <label for="grade">Grade</label>
-      <input type="number" name="grade" placeholder="84" required />
 
-      <input
-        type="text"
-        value="Images/user.png"
-        alt="image"
-        id="userimage"
-        name="userimage"
-        placeholder="user_image"
-      />
+      
       <input id="confirm1" type="submit" value="Submit" width="20px" />
     </form>
     <script src="app.js"></script>
