@@ -1,4 +1,4 @@
-let array =[];
+let array = sessionStorage.array || [];
 
 let form = document.getElementById("studentsForm");
 form.addEventListener("submit", (event) => {
@@ -12,7 +12,7 @@ form.addEventListener("submit", (event) => {
     array.push(username);
     sessionStorage.setItem('array',JSON.stringify(array) );
   }
-  form.reset();
+  // form.reset();
 });
 
 function usernameValidation(username){
@@ -38,16 +38,17 @@ function passwordValidation(password){
 }
 
 function emailValidation(email) {
-  
   let re = /\S+@\S+\.\S+/;
-  if (emailValidation(email)) {
-    alert("Email is valid");
-  } else {
-    alert("Email is invalid");
+  if (!re.test(email)) {
+    alert("Email is invalid. Please enter a valid email address.");
+    return false;
   }
-  return re.test(email);
-
-
+  return true;
 }
+
+
+
+
+
 
  
