@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <form id="studentsForm">
-      <label for="Username">Username</label>
-      <input id="username" type="text" name="username" placeholder="Hamzeh" required />
-      <label for="Password">Password</label>
-      <input id="password"  type="password" name="password"  required />
-      
-      <label for="Email">Email</label>
-      <input id="email" type="text" name="email" placeholder="Hmzhdawahreh@gmail.com" required />
-      <input
-        type="tel"
-        name="phone"
-        id="phone"
-        placeholder="07 12 345 678"
-        pattern="07\d{8}"
-        required
-      />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="flex  rounded-3 vh-auto w-25 m-top-5">
+     
+    <form id="ffrom">
 
+         <!-- 2 column grid layout with text inputs for the first and last names -->
+
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input type="text"  class="form-control" placeholder="Username" name="Username"/>
+              <label class="form-label" for="form3Example1">Username</label>
+            </div>
+          </div>
+        
       
-      <input id="confirm1" type="submit" value="Submit" width="20px" />
-    </form>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" class="form-control" placeholder="Email address"  name="Email"/>
+          <label class="form-label" for="form3Example3">Email address</label>
+        </div>
+      
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password"class="form-control" placeholder="Password" name="Password" />
+          <label class="form-label" for="form3Example4">Password</label>
+        </div>
+        
+        <div class="form-outline mb-4">
+          <input type="text"  class="form-control" placeholder="Phone" name= "Phone" />
+          <label class="form-label" for="form3Example4">Phone Number</label>
+        </div>
+      
+       
+      
+        <!-- Submit button -->
+        <div class=" text-center">
+          <div  class="alert alert-danger d-none"
+          role="alert" id="error-box"></div>
+        <button type="submit" class="btn btn-primary btn-block mb-4 ">Sign up</button>
+         </div>
+       
+      </form>
+    
+      <div class="d-none" id="card">
+  
+        
+      </div>
+      
+    
+    </section>
     <script src="app.js"></script>
-  </body>
+</body>
 </html>
